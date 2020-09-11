@@ -1,3 +1,5 @@
+# Vagrantfile for CentOS/7
+
 boxes = [
     {
         :name => "host-1",
