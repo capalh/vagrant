@@ -2,19 +2,19 @@
 
 boxes = [
     {
-        :name => "k8s-master",
+        :name => "host-1",
         :eth1 => "192.168.99.11",
         :mem => "2048",
         :cpu => "2"
     },
     {
-      :name => "k8s-node1",
+      :name => "host-2",
       :eth1 => "192.168.99.12",
       :mem => "1024",
       :cpu => "1"
     },
     {
-      :name => "k8s-node2",
+      :name => "host-3",
       :eth1 => "192.168.99.13",
       :mem => "1024",
       :cpu => "1"
