@@ -2,17 +2,23 @@
 
 boxes = [
     {
-        :name => "host-1",
-        :eth1 => "192.168.100.11",
-        :mem => "1024",
-        :cpu => "1"
+        :name => "k8s-master",
+        :eth1 => "192.168.99.11",
+        :mem => "2048",
+        :cpu => "2"
     },
     {
-        :name => "host-2",
-        :eth1 => "192.168.100.12",
-        :mem => "1024",
-        :cpu => "1"
+      :name => "k8s-node1",
+      :eth1 => "192.168.99.12",
+      :mem => "1024",
+      :cpu => "1"
     },
+    {
+      :name => "k8s-node2",
+      :eth1 => "192.168.99.13",
+      :mem => "1024",
+      :cpu => "1"
+    }
 ]
 
 Vagrant.configure(2) do |config|
