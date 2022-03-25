@@ -1,4 +1,4 @@
-# Vagrantfile for CentOS/7
+# Vagrantfile for CentOS/7 
 
 boxes = [
     {
