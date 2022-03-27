@@ -8,7 +8,10 @@
 6. Vagrant VS. Terraform:
     
     `Vagrant` is a tool fucused for managing development env. 
-    `Terraform` is a toll for building infrastructure by levarage public cloud like AWS, Azure, etc. Infrastructure as a code. Seamless tranfer between cloud providers. 
+    `Terraform` is a tool for building infrastructure by levarage public cloud like AWS, Azure, etc. Infrastructure as a code. Seamless tranfer between cloud providers. 
 
 
-1. The Vagrantfile is used to create the `CentOS/7` server. Created three Linnx VMs and configured dedicate VM informaitn like `hostname`, `IP address`, etc. 
+## Installation on macOS
+
+1. Install VirtualBox - https://www.virtualbox.org/wiki/Downloads
+2. Install Vagrant for mac - https://www.vagrantup.com/downloads
