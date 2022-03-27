@@ -44,8 +44,6 @@ Vagrant.configure("2") do |config|
 4. Configure multiple vagrant host
 
 ```
-# Write in Ruby. 
-
 Vagrant.configure("2") do |config|  
     config.vm.box = "centos/7"
     config.vm.hostname = "vagrant-demo"         # Add a hostname, this is global variable
