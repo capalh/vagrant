@@ -58,9 +58,14 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+5. Optimize the code - we can use while() to code multiple hosts
+
+```
+
+```
+
 
 ## Vagrant CLI
 
 1. Check the downloaded images `vagrant box list`
 2. Add a box repo source `vagrant box add centos7 https://xxx`
-3. 
