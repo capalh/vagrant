@@ -13,7 +13,7 @@
 
 7. Inside the .vagrant folder
 
-```
+
 ?  docker-learning git:(main) tree .vagrant
 .vagrant
 ©À©¤©¤ bundler
@@ -32,8 +32,6 @@
 ©¦??         ©¸©¤©¤ vagrant_cwd
 ©¸©¤©¤ rgloader
     ©¸©¤©¤ loader.rb
-
-```
 
 
 ## Installation on macOS
