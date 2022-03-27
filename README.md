@@ -11,6 +11,30 @@
 
     `Terraform` is a tool for building infrastructure by levarage public cloud like AWS, Azure, etc. Infrastructure as a code. Seamless tranfer between cloud providers. 
 
+7. Inside the .vagrant folder
+
+```
+tree .vagrant
+.vagrant
+©À©¤©¤ bundler
+©¦?? ©¸©¤©¤ global.sol
+©À©¤©¤ machines
+©¦?? ©¸©¤©¤ docker-host
+©¦??     ©¸©¤©¤ virtualbox
+©¦??         ©À©¤©¤ action_provision
+©¦??         ©À©¤©¤ action_set_name
+©¦??         ©À©¤©¤ box_meta
+©¦??         ©À©¤©¤ creator_uid
+©¦??         ©À©¤©¤ id
+©¦??         ©À©¤©¤ index_uuid
+©¦??         ©À©¤©¤ private_key
+©¦??         ©À©¤©¤ synced_folders
+©¦??         ©¸©¤©¤ vagrant_cwd
+©¸©¤©¤ rgloader
+    ©¸©¤©¤ loader.rb
+
+```
+
 
 ## Installation on macOS
 
@@ -27,7 +51,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
 end
-
 ```
 
 
