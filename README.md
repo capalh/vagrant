@@ -14,7 +14,7 @@
 7. Inside the .vagrant folder
 
 ```
-tree .vagrant
+?  docker-learning git:(main) tree .vagrant
 .vagrant
 ©À©¤©¤ bundler
 ©¦?? ©¸©¤©¤ global.sol
