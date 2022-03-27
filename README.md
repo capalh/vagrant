@@ -7,7 +7,7 @@
 5. Vagrant VS. Docker -> VM vs Container
 6. Vagrant VS. Terraform:
     
-    `Vagrant` is a tool fucused for managing development env. 
+    `Vagrant` is a tool fucused for managing development env.\n 
     `Terraform` is a tool for building infrastructure by levarage public cloud like AWS, Azure, etc. Infrastructure as a code. Seamless tranfer between cloud providers. 
 
 
