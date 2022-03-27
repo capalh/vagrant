@@ -23,13 +23,24 @@
 ## Vagrantfile
 
 1. Write in Ruby. 
-2. A sample Vagrantfile
+2. A sample Vagrantfile - the same as when using `vagrant init centos/7`
 
 ```
-Vagrant.configure("2") do |config|
+Vagrant.configure("2") do |config|  
   config.vm.box = "centos/7"
 end
 ```
+
+3. Add a hostname and specific CentOS version
+
+```
+Vagrant.configure("2") do |config|  
+    config.vm.box = "centos/7"
+    config.vm.hostname = "vagrant-demo"   # Add a hostname
+    config.vm.box_version = "1905.1"      # Use specific version
+  end
+```
+
 
 
 ## Vagrant CLI
