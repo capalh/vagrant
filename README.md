@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-5. Optimize the code - we can use while() to code multiple hosts
+5. Optimize the code - use each method to lookup defined hosts in host_list[]
 
 ```
 # Define a host_list that defines each hosts parameters. 
