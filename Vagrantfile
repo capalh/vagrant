@@ -4,13 +4,10 @@
 
 host_list = [
     {
-        :name => "host-1-web",
+        :name => "host-1",
         :box => "centos/7"
     },
-    {
-        :name => "host-2-db",
-        :box => "generic/centos8"
-    },
+
 ]
 
 
