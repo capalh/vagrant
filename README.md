@@ -107,7 +107,7 @@ vagrant-vbguest (0.21.0, global)
   - Version Constraint: 0.21
 ```
 
-Then the folder will be sync up between `/Users/jasonli/DevOps/vagrant/test/` and `/vagrant` under the virtual machine. 
+Then the folder will be sync up between `~/DevOps/vagrant/test/` and `/vagrant` under the virtual machine. 
 
 
 ## Vagrant CLI
