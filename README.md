@@ -14,13 +14,13 @@
 7. Inside the .vagrant folder, including the metadata of Vagrant; and the ~/.vagrant.d/ folder containes the images. 
 
 
-## Installation on macOS
+## 1 - Installation on macOS
 
 1. Install VirtualBox - https://www.virtualbox.org/wiki/Downloads
 2. Install Vagrant for mac - https://www.vagrantup.com/downloads
 
 
-## Vagrantfile
+## 2 - Vagrantfile
 
 1. Write in Ruby. 
 2. A sample Vagrantfile - the same as when using `vagrant init centos/7`
@@ -86,7 +86,7 @@ end
 
 
 
-## Sync up the folder betwwen vagrant host and the bare metal machine
+## 4 - Sync up the folder betwwen vagrant host and the bare metal machine
 
 We can sync up the folder between the vagrant host and the macOS system. See the following logs ->
 
@@ -109,6 +109,8 @@ vagrant-vbguest (0.21.0, global)
 
 Then the folder will be sync up between `~/DevOps/vagrant/test/` and `/vagrant` under the virtual machine. 
 
+
+## Vagrant Network
 
 ## Vagrant CLI
 
