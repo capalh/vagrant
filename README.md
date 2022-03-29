@@ -86,7 +86,7 @@ end
 
 
 
-## 4 - Sync up the folder betwwen vagrant host and the bare metal machine
+## 3 - Sync up the folder betwwen vagrant host and the bare metal machine
 
 We can sync up the folder between the vagrant host and the macOS system. See the following logs ->
 
@@ -110,7 +110,9 @@ vagrant-vbguest (0.21.0, global)
 Then the folder will be sync up between `~/DevOps/vagrant/test/` and `/vagrant` under the virtual machine. 
 
 
-## Vagrant Network
+## 4- Vagrant Network
+
+
 
 ## Vagrant CLI
 
