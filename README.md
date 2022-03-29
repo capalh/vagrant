@@ -98,7 +98,7 @@ To achive this, we will need to:
 
 1. Modify the file from PATH `~/.vagrant.d/boxes/centos-VAGRANTSLASH-7/1905.1/virtualbox`
 2. Disable `config.vm.synced_folder ".", "/vagrant", type: "rsync"`
-3. Install the vbguest plugin, like the following
+3. Install the vbguest plug-in, like the following
 
 ```
 vagrant plugin list
@@ -115,3 +115,7 @@ Then the folder will be sync up between `~/DevOps/vagrant/test/` and `/vagrant` 
 1. Check the downloaded images `vagrant box list`
 2. Add a box repo source `vagrant box add centos7 https://xxx`
 3. Add/remove an image `vagrant box add/remove generic/ubuntu2004`
+4. Install vbguest `vagrant plugin install vagrant-vbguest`
+5. Package a customized box `vagrant package --base VM_ID`
+6. Add to vagrant box list `vagrant box add --name NAME ./package_name`
+7. Init a customized package `vagrant init centos-vim`
