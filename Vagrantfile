@@ -3,6 +3,7 @@
 # Define a host_list including the attribute of hostname and image version 
 
 host_list = [
+    
     {
         :name => "host-1",
         :eth1 => "192.168.200.11"

@@ -127,10 +127,11 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-2. For virtualbox, the created VM under en0 with assigned IP 10.0.2.15, the hosts can't reach out to each others. So need to rely on the private network. Sample code:
+2. Private Network: For virtualbox, the created VM under en0 with assigned IP 10.0.2.15, the hosts can't reach out to each others. So need to rely on the private network. Sample code:
 
 ```
 host_list = [
+
     {
         :name => "host-1",
         :eth1 => "192.168.200.11"
@@ -155,6 +156,36 @@ end
 
 ```
 
+Or we can use the type as DHCP
+
+```
+host_list = [
+
+    {
+        :name => "host-1",
+        :eth1 => "192.168.200.11"
+    },
+
+    {
+        :name => "host-2",
+        :eth1 => "192.168.200.12"
+    },
+
+]
+
+Vagrant.configure("2") do |config|  
+    config.vm.box = "centos/7"                                      # set the global box image version
+    host_list.each do |item|                                        # Loop up all items defined at host_list[]
+        config.vm.define item[:name] do |host|                      # define the host name, read the attribute from host_list
+            host.vm.hostname = item[:name]                          # set the hostname
+            host.vm.network "private_network", type:"dhcp"          # set priviate network type as DHCP
+        end
+    end
+end
+
+```
+
+3. Public Network : 
 
 
 ## Vagrant CLI
