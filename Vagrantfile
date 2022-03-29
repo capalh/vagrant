@@ -1,6 +1,3 @@
-# Write in Ruby. 
-
-# Define a host_list including the attribute of hostname and image version 
 
 host_list = [
 
@@ -9,20 +6,19 @@ host_list = [
         :eth1 => "192.168.200.11"
     },
 
-    {
-        :name => "host-2",
-        :eth1 => "192.168.200.12"
-    },
-
 ]
 
 Vagrant.configure("2") do |config|  
     config.vm.box = "centos/7"
-    host_list.each do |item|                                        # use .each method to loop up all item in host_list
-        config.vm.define item[:name] do |host|                      # define the host name and read the attribute from host_list
-            host.vm.hostname = item[:name]                          # set the hostname
-            host.vm.network "private_network", type: "dhcp"         # set priviate network type as DHCP
-            host.vm.network "public_network"
+    host_list.each do |item|                                       
+        config.vm.define item[:name] do |host|                      
+            host.vm.hostname = item[:name]                         
+            host.vm.network "private_network", ip: item[:eth1]      
         end
     end
+    config.vm.provision "shell", inline: <<-SHELL
+        sudo yum install -y epel-release
+        sudo yum install -y nginx
+        sudo systemctl start nginx
+    SHELL
 end
