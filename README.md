@@ -85,13 +85,12 @@ end
 ```
 
 
+## 3 - Folder synchronization between vagrant VMs and hosts
 
-## 3 - Sync up the folder between vagrant host and macOS
-
-We can sync up the folder between the vagrant host and the macOS system. See the following logs ->
+We can sync up the folder between the vagrant VMs and its host. We could the following logs from the logs entry after create a VM
 
 ```
-host-1: Rsyncing folder: /Users/jasonli/DevOps/vagrant/test/ => /vagrant
+host-1: Rsyncing folder: ~/DevOps/vagrant/test/ => /vagrant
 ```
 
 To achive this, we will need to:
