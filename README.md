@@ -218,7 +218,7 @@ end
 1. We can install some tools and yum packages after the VMs deployed
 2. There are multiple automation technology to leverage by vagrant, like `shell`, `Ansible`, `docker`, etc
 
-#### Shell provisioner
+#### 5.1 Shell provisioner
 
 1. Inline shell. Sample code:
 
@@ -255,7 +255,7 @@ end
 ```
 
 
-#### Ansible provisioner
+#### 5.2 Ansible provisioner
 
 
 
