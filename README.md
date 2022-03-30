@@ -226,6 +226,8 @@ end
 
 #### 5.2 Ansible provisioner
 
+1. We can also use Ansible as the provisioner
+2. See the sample code from the `provision-ansible` folder.
 
 
 
