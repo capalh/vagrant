@@ -111,107 +111,11 @@ Then the folder will be sync up between `~/DevOps/vagrant/test/` and `/vagrant` 
 
 ## 4 - Vagrant Network
 
-1. Forwarded network port policy, sample vagrantfile
+1. Forwarded network port policy, sample code - `network-forwarded-port-policy`
 
-```
-Vagrant.configure("2") do |config|  
-    host_list.each do |item|                                        # use .each method to loop up all item in host_list
-        config.vm.define item[:name] do |host|                      # define the host name and read the attribute from host_list
-            host.vm.hostname = item[:name]                          # set the hostname
-            host.vm.box = item[:box]                                # set the box version 
-            host.vm.network "forwarded_port", guest:80, host:8000   # set port forwarding policy. Note: Only applied for virtualbox
-            host.ssh.insert_key = false                             # disable replace generated key pair, use insecure key
-        end
-    end
-end
-```
+2. Private Network, sample code - `network-private-network`
 
-2. Private Network: For virtualbox, the created VM under en0 with assigned IP 10.0.2.15, the hosts can't reach out to each others. So need to rely on the private network. Sample code:
-
-```
-host_list = [
-
-    {
-        :name => "host-1",
-        :eth1 => "192.168.200.11"
-    },
-
-    {
-        :name => "host-2",
-        :eth1 => "192.168.200.12"
-    },
-
-]
-
-Vagrant.configure("2") do |config|  
-    config.vm.box = "centos/7"                                      # set the global box image version
-    host_list.each do |item|                                        # Loop up all items defined at host_list[]
-        config.vm.define item[:name] do |host|                      # define the host name, read the attribute from host_list
-            host.vm.hostname = item[:name]                          # set the hostname
-            host.vm.network "private_network", ip: item[:eth1]      # set priviate network that allow hosts can reach out to each other, read the option from host_list
-        end
-    end
-end
-
-```
-
-Or we can use the type as DHCP
-
-```
-host_list = [
-
-    {
-        :name => "host-1",
-        :eth1 => "192.168.200.11"
-    },
-
-    {
-        :name => "host-2",
-        :eth1 => "192.168.200.12"
-    },
-
-]
-
-Vagrant.configure("2") do |config|  
-    config.vm.box = "centos/7"                                      # set the global box image version
-    host_list.each do |item|                                        # Loop up all items defined at host_list[]
-        config.vm.define item[:name] do |host|                      # define the host name, read the attribute from host_list
-            host.vm.hostname = item[:name]                          # set the hostname
-            host.vm.network "private_network", type:"dhcp"          # set priviate network type as DHCP
-        end
-    end
-end
-
-```
-
-3. Public Network 
-
-```
-host_list = [
-
-    {
-        :name => "host-1",
-        :eth1 => "192.168.200.11"
-    },
-
-    {
-        :name => "host-2",
-        :eth1 => "192.168.200.12"
-    },
-
-]
-
-Vagrant.configure("2") do |config|  
-    config.vm.box = "centos/7"
-    host_list.each do |item|                                        # use .each method to loop up all item in host_list
-        config.vm.define item[:name] do |host|                      # define the host name and read the attribute from host_list
-            host.vm.hostname = item[:name]                          # set the hostname
-            host.vm.network "private_network", type: "dhcp"         # set priviate network type as DHCP
-            host.vm.network "public_network"                        # set public IP address
-        end
-    end
-end
-```
+3. Public Network , sample code - `network-public-network`
 
 ## 5 - Vagrant Provisioning
 
