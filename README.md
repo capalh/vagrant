@@ -85,7 +85,7 @@ Then the folder will be sync up between `~/DevOps/vagrant/test/` and `/vagrant` 
 
 
 
-## Vagrant CLI
+## Vagrant frequently used CLI
 
 1. Check the downloaded images `vagrant box list`
 2. Add a box repo source `vagrant box add centos7 https://xxx`
