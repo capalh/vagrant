@@ -31,9 +31,9 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-Note: if want to write a simple vagrantfile quickluy, see the sample code - `A simple vagrantfile`
+Note: if want to write a simple vagrantfile quickly, refer the sample code - `A simple vagrantfile`
 
-3. Add loop function of ruby in a vagrantfile, sample code - `multiple-hosts`
+3. Add loop function of ruby in a vagrantfile - `multiple-hosts`
 
 ## 3 - Folder synchronization between vagrant VMs and hosts
 
