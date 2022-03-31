@@ -1,21 +1,20 @@
 #/bin/sh
 
-# install necessary tolls
+# install necessary tools at CentOS
 
 sudo yum install -y git vim gcc glibc-static telnet psmisc
 
 # install docker
 
-curl -fsSL https://get.docker.com -o get-docker.sh
+curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
 
-if [! $(getent group docker) ]; then
-    sudo groupadd docker
-else
-    echo "docker user group alreay exists"
-fi
+# Add vagrant to docker groups, start docker service
 
-sudo gpasswd -a $USER docker
+sudo groupadd docker
+sudo gpasswd -a vagrant docker
 sudo systemctl start docker
+
+# remove install docker script
 
 rm -rf get-docker.sh
