@@ -23,7 +23,7 @@
 ## 2 - Vagrantfile
 
 1. Write in Ruby. 
-2. A sample Vagrantfile - the same as when using `vagrant init centos/7`
+2. A simple Vagrantfile - automatically generated after running `vagrant init centos/7`
 
 ```
 Vagrant.configure("2") do |config|  
@@ -31,34 +31,9 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-3. Configure hostname and specific CentOS version
+3. Some thing more see the sample code - `A simple vagrantfile`
 
-```
-Vagrant.configure("2") do |config|  
-    config.vm.box = "centos/7"
-    config.vm.hostname = "vagrant-demo"   # Add a hostname
-    config.vm.box_version = "1905.1"      # Use specific version
-  end
-```
-
-4. Configure multiple vagrant host
-
-```
-Vagrant.configure("2") do |config|  
-    config.vm.box = "centos/7"
-    config.vm.hostname = "vagrant-demo"         # Add a hostname, this is global variable
-    config.vm.box_version = "1905.1"            # Use specific version, this is global variable 
-    config.vm.define "host-1-web" do |web|      # Create a web ojbect 
-        web.vm.hostname = "web"                 # setup the hostname as web for host-1
-        web.vm.box_version = "2004.01"          # setup the box version using local variable
-    end
-    config.vm.define "host-2-db" do |db|
-        db.vm.hostname = "db"                   # setup the hostname for host-2 as db
-    end
-end
-```
-
-5. Optimize the code - use each method to lookup defined hosts in host_list[], sample code - `multiple-hosts`
+4. Optimize the code - use each method to lookup defined hosts in host_list[], sample code - `multiple-hosts`
 
 
 ## 3 - Folder synchronization between vagrant VMs and hosts
