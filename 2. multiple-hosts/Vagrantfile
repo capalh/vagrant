@@ -4,11 +4,11 @@
 host_list = [
     {
         :name => "host-1",
-        :box => "centos/7"
+        :box => "centos/7"                          # Centos/7 images
     },
     {
         :name => "host-2",
-        :box => "generic/centos8"                   # A testable reliable verion of CentOS/8
+        :box => "generic/centos8"                   # CentOS/8 images
     },
     {
         :name => "host-3",
