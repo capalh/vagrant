@@ -10,6 +10,11 @@ host_list = [
         :name => "host-2",
         :box => "generic/centos8"                   # A testable reliable verion of CentOS/8
     },
+    {
+        :name => "host-3",
+        :box => "bento/ubuntu-18.04"                # Ubuntu images
+    },
+]
 ]
 
 
