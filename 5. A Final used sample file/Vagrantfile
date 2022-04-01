@@ -1,7 +1,4 @@
-# A final used file, generated multiple hosts, using centos/7
-# Can change the centos version to Centos/8
-
-
+# A final production vagrantfile, with using centos/7; IP subnet 192.168.200.0/24
 
 host_list = [
 
@@ -23,8 +20,7 @@ host_list = [
 ]
 
 Vagrant.configure("2") do |config|  
-    config.vm.box = "centos/7"
-#    config.vm.box = "generic/centos8"                              
+    config.vm.box = "centos/7"                         
     host_list.each do |item|                                       
         config.vm.define item[:name] do |host|                      
             host.vm.hostname = item[:name]                         
